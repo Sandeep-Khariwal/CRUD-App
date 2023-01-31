@@ -16,9 +16,7 @@ const Home = () => {
       <motion.div className='crud' initial={{y:"-100%"}} whileInView={{y:"0%"}} transition={{duration: 1, times: [1] }}  >
         <h3>
             C <span><FaLongArrowAltRight/></span> Create , R <span><FaLongArrowAltRight/></span> Read   <br/><br/>
-            {/* R = Read   <br/><br/> */}
             U <span><FaLongArrowAltRight/></span> Update , D <span><FaLongArrowAltRight/></span> Delete 
-            {/* D = Delete  */}
         </h3>
       </motion.div>
 
