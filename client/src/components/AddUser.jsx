@@ -13,7 +13,6 @@ const defaultValue = {
 const AddUser = () => {
 
   const [user,setUser] = useState(defaultValue)
-  const { name, username, email, phone } = user;
 
   // initialsize the useNavugate
   let navigate = useNavigate();
@@ -42,10 +41,10 @@ const AddUser = () => {
     transition={{delay:0.3}}
     >
         <h2>Add Users</h2>
-        <input type="text" placeholder='Name' name='name' onChange={onChangeHandler} value={name}/>
-        <input type="email" placeholder='Email' name='email' onChange={onChangeHandler} value={email} />
-        <input type="text" placeholder='User Name' name='username' onChange={onChangeHandler} value={username} />
-        <input type="number" placeholder='Phone' name='phone' onChange={onChangeHandler} value={phone} />
+        <input type="text" placeholder='Name' name='name' onChange={onChangeHandler} />
+        <input type="email" placeholder='Email' name='email' onChange={onChangeHandler}  />
+        <input type="text" placeholder='User Name' name='username' onChange={onChangeHandler}  />
+        <input type="number" placeholder='Phone' name='phone' onChange={onChangeHandler}  />
 
         <button type='submit' onClick={addUserDetails} >Add User</button>
 

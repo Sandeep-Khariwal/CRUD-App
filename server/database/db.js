@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
 
-
-
 // DataBase is connecte to backend here
 const connection = async() =>{
     const URL = "mongodb://localhost:27017/crudOperation";
@@ -12,7 +10,6 @@ const connection = async() =>{
     }catch(error){
         console.log("Error while connecting with database",error)
     }
-
 }
 
 module.exports = connection

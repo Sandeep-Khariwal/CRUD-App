@@ -1,25 +1,26 @@
 import React,{  useEffect,useState }  from 'react';
-import {getUsers , deleteUSer} from "../service/api";
+import {getUsers , deleteUser} from "../service/api";
 import{MdEdit,MdDelete} from "react-icons/md";
-import { Link } from 'react-router-dom';
+import { Link , useNavigate } from 'react-router-dom';
 
 const AllUsers = () => {
 
-  const [user , setUser] = useState([])
+  const [user , setUser] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(()=>{
-    getAllUSers();
+    getAllUsers();
   },[])
 
-  const getAllUSers = async() =>{
+  const getAllUsers = async() =>{
     let resp = await getUsers()
-    console.log(resp.data)
     setUser(resp.data);
   }
 
   const deleteUSerDetails = async(id) =>{
-      await deleteUSer(id);
-      getAllUSers();
+      await deleteUser(id);
+      navigate("/allUsers")
   }
 
   return (
@@ -44,16 +45,12 @@ const AllUsers = () => {
               <td>{user.email}</td>
               <td>{user.username}</td>
               <td>{user.phone}</td>
-              <td>
-                <Link to ={`/editUsers/:${user._id}`}  >
-                  <button className='edit'
-                   style={{padding:"0.5rem 1rem",backgroundColor:"green", borderRadius:"0.8rem", margin:"0 0.5rem", fontSize:"1.2rem",cursor:"pointer" }}
-                  ><MdEdit/></button>
+              <td className='buttons' >
+                <Link to ={`/${user._id}`}>
+                  <button className='edit'><MdEdit/></button>
                 </Link>
-                <Link to ={`/deleteUsers/:${user._id}`}  >
-                  <button className='delete' 
-                  style={{padding:"0.5rem 1rem",backgroundColor:"red", borderRadius:"0.8rem", fontSize:"1.2rem",cursor:"pointer" }}
-                  onClick={()=>deleteUSerDetails(user._id)} ><MdDelete/></button>
+                <Link to ={`/${user._id}`}  >
+                  <button className='delete' onClick={()=>deleteUSerDetails(user._id)} ><MdDelete/></button>
                 </Link>
               </td>
           </tr>

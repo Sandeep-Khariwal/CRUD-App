@@ -18,11 +18,10 @@ function App() {
     <Router>
     <NavBar/>
      < Routes>
-        <Route exact path='/' element={<Home/>} />
+        <Route exact path='*' element={<Home/>} />
         <Route exact path='/allUsers' element={<AllUsers/>} />
         <Route exact path='/addUsers' element={<AddUser/>} />
-        <Route exact path='/editUsers/:id' element={<EditUsers/> } />
-        {/* <Route exact path='/deleteUsers/:id' element={<deleteU } /> */}
+        <Route exact path='/:id' element={<EditUsers/> } />
      </Routes>
     </Router>
   );
