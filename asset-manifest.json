@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/CRUD-App/static/css/main.cc8ad5e7.css",
-    "main.js": "/CRUD-App/static/js/main.8516e1e4.js",
+    "main.css": "/CRUD-App/static/css/main.e6060509.css",
+    "main.js": "/CRUD-App/static/js/main.68f1c6e3.js",
     "index.html": "/CRUD-App/index.html",
-    "main.cc8ad5e7.css.map": "/CRUD-App/static/css/main.cc8ad5e7.css.map",
-    "main.8516e1e4.js.map": "/CRUD-App/static/js/main.8516e1e4.js.map"
+    "main.e6060509.css.map": "/CRUD-App/static/css/main.e6060509.css.map",
+    "main.68f1c6e3.js.map": "/CRUD-App/static/js/main.68f1c6e3.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc8ad5e7.css",
-    "static/js/main.8516e1e4.js"
+    "static/css/main.e6060509.css",
+    "static/js/main.68f1c6e3.js"
   ]
 }
