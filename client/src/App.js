@@ -5,12 +5,15 @@ import Home from './components/Home';
 import AllUsers from './components/AllUsers';
 import AddUser from './components/AddUser';
 import EditUsers from './components/EditUsers';
+import Error from './components/Error';
 
 import "./styling/navbar.scss"
 import "./styling/home.scss"
 import "./styling/allusers.scss"
 import "./styling/addusers.scss"
 import "./styling/editUsers.scss"
+import "./styling/error.scss"
+
 
 
 function App() {
@@ -18,10 +21,11 @@ function App() {
     <Router>
     <NavBar/>
      < Routes>
-        <Route exact path='*' element={<Home/>} />
+        <Route path="/" element={<Home/>} />
         <Route exact path='/allUsers' element={<AllUsers/>} />
         <Route exact path='/addUsers' element={<AddUser/>} />
         <Route exact path='/:id' element={<EditUsers/> } />
+        <Route path='/CRUD-App' element={<Error/> } />
      </Routes>
     </Router>
   );
