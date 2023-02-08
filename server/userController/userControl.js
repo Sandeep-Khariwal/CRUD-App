@@ -19,7 +19,7 @@ module.exports = addUsers
 // code for get data from database
 const getUsers = async(_,resp)=>{
     try{
-       const users = await User.find();
+       const users = await User.find({});
        resp.status(200).json(users); 
     }catch(error){
         resp.status(404).json({message:error.message})

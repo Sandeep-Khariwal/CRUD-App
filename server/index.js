@@ -10,11 +10,15 @@ const app = express()
 // initialise the dotenv
 dotenv.config();
 
+
+// json data ko chhantne(parsing) k liye
 app.use(bodyParser.json({extended:true}))
+
+// http request me jo data hai use encrypt krne k liye
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.json());
 
-// to handle corse error during api request
+// to handle cors error during api request becoz frontend and backend both running on diff. port
 app.use(cors());
 
 // if you dont have default end route then leave first parameter empty
